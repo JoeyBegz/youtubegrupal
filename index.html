@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YouTube Dark</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Usando el favicon oficial de YouTube (enlazado desde su CDN) -->
+<link rel="icon" href="https://www.youtube.com/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top px-3">
+    <div class="container-fluid">
+      <!-- Menú hamburguesa + Logo -->
+      <div class="d-flex align-items-center">
+        <button class="btn btn-link me-2" type="button" id="sidebarToggle">
+          <i class="bi bi-list fs-5"></i>
+        </button>
+        <a class="navbar-brand fw-bold" href="#">
+          <img src="imagenes/LOGO0 YOUTUBE.png" alt="logo youtube" style="height: 15px;">
+        </a>
+      </div>
+  
+      <!-- Barra de búsqueda -->
+      <form class="d-none d-sm-flex mx-4 flex-grow-1">
+        <div class="input-group">
+          <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar">
+          <button class="btn btn-outline-secondary" type="submit">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </form>
+  
+      <!-- Íconos a la derecha -->
+      <div class="d-flex align-items-center">
+        <button class="btn btn-link me-2 d-none d-sm-inline">
+          <i class="bi bi-mic-fill fs-5"></i>
+        </button>
+        <button class="btn btn-link me-2 d-none d-md-inline">
+          <i class="bi bi-grid-3x3-gap fs-5"></i>
+        </button>
+        <button class="btn btn-link me-2">
+          <i class="bi bi-bell fs-5"></i>
+        </button>
+        <img src="imagenes/PRIMER PLANO (2).jpeg" class="rounded-circle" alt="Perfil" style="height: 30px">
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <div class="sidebar d-none d-sm-block" id="sidebar">
+    <!-- Sección principal -->
+    <div class="sidebar-section">
+      <div class="sidebar-item active">
+        <i class="bi bi-house-door"></i>
+        <span>Inicio</span>
+      </div>
+      <div class="sidebar-item">
+        <i class="bi bi-play-btn"></i>
+        <span>Shorts</span>
+      </div>
+      <div class="sidebar-item">
+        <i class="bi bi-collection"></i>
+        <span>Suscripciones</span>
+      </div>
+    </div>
+    
+    <!-- Sección "Tú" -->
+    <div class="sidebar-section">
+      <div class="sidebar-title">Tú</div>
+      <div class="sidebar-item">
+        <i class="bi bi-clock-history"></i>
+        <span>Historial</span>
+      </div>
+      <div class="sidebar-item">
+        <i class="bi bi-list-ul"></i>
+        <span>Listas de reproducción</span>
+      </div>
+    </div>
+    
+    <!-- Sección "Mis vídeos" -->
+    <div class="sidebar-section">
+      <div class="sidebar-item">
+        <i class="bi bi-play-circle"></i>
+        <span>Mis vídeos</span>
+      </div>
+      <div class="sidebar-item">
+        <i class="bi bi-clock"></i>
+        <span>Ver más tarde</span>
+      </div>
+      <div class="sidebar-item">
+        <i class="bi bi-hand-thumbs-up"></i>
+        <span>Vídeos que me gustan</span>
+      </div>
+    </div>
+    
+    <!-- Suscripciones -->
+    <div class="sidebar-section">
+      <div class="sidebar-title">Suscripciones</div>
+      <div class="sidebar-item">
+        <img src="imagenes/PRIMER PLANO (2).jpeg" class="rounded-circle" alt="Perfil" style="height: 30px">
+        <span>Claro Sports</span>
+      </div>
+      <div class="sidebar-item">
+        <img src="imagenes/PRIMER PLANO (2).jpeg" class="rounded-circle" alt="Perfil" style="height: 30px">
+        <span>alanxelmundo</span>
+      </div>
+      <div class="sidebar-item">
+        <img src="imagenes/PRIMER PLANO (2).jpeg" class="rounded-circle" alt="Perfil" style="height: 30px">
+        <span>HiClavero</span>
+      </div>
+      <div class="sidebar-item">
+        <img src="imagenes/PRIMER PLANO (2).jpeg" class="rounded-circle" alt="Perfil" style="height: 30px">
+        <span>Max y Noelia</span>
+      </div>
+      <div class="sidebar-item">
+        <img src="imagenes/PRIMER PLANO (2).jpeg" class="rounded-circle" alt="Perfil" style="height: 30px">
+        <span>Luísito Comunica</span>
+      </div>
+      <div class="sidebar-item">
+       <img src="imagenes/PRIMER PLANO (2).jpeg" class="rounded-circle" alt="Perfil" style="height: 30px">
+        <span>Un Mundo Inmenso</span>
+      </div>
+      <div class="sidebar-item">
+        <img src="imagenes/PRIMER PLANO (2).jpeg" class="rounded-circle" alt="Perfil" style="height: 30px">
+        <span>Mery Alicee</span>
+      </div>
+      <div class="sidebar-item">
+        <i class="bi bi-chevron-down"></i>
+        <span>Mostrar más</span>
+      </div>
+    </div>
+    
+    <!-- Explorar -->
+    <div class="sidebar-section">
+      <div class="sidebar-title">Explorar</div>
+      <div class="sidebar-item">
+        <i class="bi bi-fire"></i>
+        <span>Tendencias</span>
+      </div>
+    </div>
+  </div>
+
+ <!-- Main content -->
+<div class="main-content" id="mainContent">
+  <div class="container-fluid">
+    <!-- Elimina la row exterior y usa solo una estructura de grid -->
+    <div class="row g-3">
+      <!-- Tarjeta 1 -->
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4" > <!-- Ajusta las columnas según necesidad -->
+        <div class="card h-100"> <!-- h-100 para igualar altura -->
+          <img src="imagenes/9-.png" class="card-img-top img-fluid" alt="Miniatura"> <!-- img-fluid para imágenes responsivas -->
+          <div class="card-body p-2">
+            <h6 class="card-title mb-1">Título del Video</h6>
+            <p class="card-text text-muted small">Canal • 1M vistas</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tarjeta 2 -->
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+        <div class="card h-100">
+         <video src="videos/dua-lipa-radical-optimism-tour-teaser.mp4" controls height="300px"></video>
+          <div class="card-body p-2">
+            <h6 class="card-title mb-1">Título del Video</h6>
+            <p class="card-text text-muted small">Canal • 500K vistas</p>
+          </div>
+        </div>
+      </div>
+    
+      
+      <!-- Tarjeta 3 -->      
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+        <div class="card h-100">
+          <img src="imagenes/2-.png" class="card-img-top img-fluid" alt="Miniatura">
+          <div class="card-body p-2">
+            <h6 class="card-title mb-1">Título del Video</h6>
+            <p class="card-text text-muted small">Canal • 500K vistas</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 4 -->      
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+        <div class="card h-100">
+          <img src="imagenes/3-.png" class="card-img-top img-fluid" alt="Miniatura">
+          <div class="card-body p-2">
+            <h6 class="card-title mb-1">Título del Video</h6>
+            <p class="card-text text-muted small">Canal • 500K vistas</p>
+          </div>
+        </div>
+      </div>   
+      <!-- Tarjeta 5 -->
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+        <div class="card h-100">
+          <img src="imagenes/4-.png" class="card-img-top img-fluid" alt="Miniatura">
+          <div class="card-body p-2">
+            <h6 class="card-title mb-1">Título del Video</h6>
+            <p class="card-text text-muted small">Canal • 500K vistas</p>
+          </div>
+        </div>
+      </div>
+    
+      
+      <!-- Tarjeta 6 -->      
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+        <div class="card h-100">
+          <img src="imagenes/5-.png" class="card-img-top img-fluid" alt="Miniatura">
+          <div class="card-body p-2">
+            <h6 class="card-title mb-1">Título del Video</h6>
+            <p class="card-text text-muted small">Canal • 500K vistas</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 7 -->      
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+        <div class="card h-100">
+          <img src="imagenes/6-.png" class="card-img-top img-fluid" alt="Miniatura">
+          <div class="card-body p-2">
+            <h6 class="card-title mb-1">Título del Video</h6>
+            <p class="card-text text-muted small">Canal • 500K vistas</p>
+          </div>
+        </div>
+      </div>          
+      <!-- Tarjeta 8 -->
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+        <div class="card h-100">
+          <img src="imagenes/7-.png" class="card-img-top img-fluid" alt="Miniatura">
+          <div class="card-body p-2">
+            <h6 class="card-title mb-1">Título del Video</h6>
+            <p class="card-text text-muted small">Canal • 500K vistas</p>
+          </div>
+        </div>
+      </div>
+    
+      
+      <!-- Tarjeta 9 -->      
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+        <div class="card h-100">
+          <img src="imagenes/8-.png" class="card-img-top img-fluid" alt="Miniatura">
+          <div class="card-body p-2">
+            <h6 class="card-title mb-1">Título del Video</h6>
+            <p class="card-text text-muted small">Canal • 500K vistas</p>
+          </div>
+        </div>
+      </div>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
